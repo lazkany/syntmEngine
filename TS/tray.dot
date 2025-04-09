@@ -1,0 +1,94 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+MainTS : CH=[p,a,d,f], OUT=[rD,rF,rP] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+InTray: CH=[a,f], OUT=[rF];
+
+Pkg: CH=[d], OUT=[rD];
+
+Proc: CH=[p], OUT=[rP]"];
+	9[label="{p}
+
+d/rP
+
+9"];
+
+	0[label="{a}
+
+/-
+
+0"];
+
+	1[label="{f}
+
+a/rF
+
+1"];
+
+	5[label="{d,f}
+
+a/rD,rF
+
+5"];
+
+	2[label="{p}
+
+f/rP
+
+2"];
+
+	8[label="{d}
+
+f/rD,rP
+
+8"];
+
+	3[label="{a,d}
+
+p/rD
+
+3"];
+
+	4[label="{a}
+
+d/-
+
+4"];
+
+	7[label="{f}
+
+d/rF
+
+7"];
+
+	 init -> 0[penwidth=0,tooltip="initial state"];
+
+	4 -> 1[label="a"];
+
+	9 -> 3[label="p"];
+
+	0 -> 1[label="a"];
+
+	5 -> 7[label="d"];
+
+	8 -> 9[label="d"];
+
+	5 -> 8[label="f"];
+
+	1 -> 2[label="f"];
+
+	7 -> 2[label="f"];
+
+	2 -> 3[label="p"];
+
+	3 -> 4[label="d"];
+
+	3 -> 5[label="a"];
+
+
+}

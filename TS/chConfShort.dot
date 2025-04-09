@@ -1,0 +1,76 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+MainTS : CH=[a, b, d, e, f], OUT=[-] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+T1: CH=[f,e], OUT=[-];
+
+T2: CH=[a,b,d], OUT=[-]"];
+	3[label="{a,b}
+
+/-
+
+3"];
+
+	4[label="{d}
+
+a/-
+
+4"];
+
+	9[label="{e}
+
+d/-
+
+9"];
+
+	5[label="{d}
+
+b/-
+
+5"];
+
+
+
+	6[label="{f}
+
+d/-
+
+6"];
+
+	8[label="{e}
+
+e/-
+
+8"];
+
+	7[label="{f}
+
+f/-
+
+7"];
+
+	 init -> 3[penwidth=0,tooltip="initial state"];
+
+	4 -> 6[label="d"];
+
+	7 -> 7[label="f"];
+
+	6 -> 7[label="f"];
+
+	3 -> 4[label="a"];
+
+	8 -> 8[label="e"];
+
+	3 -> 5[label="b"];
+
+	5 -> 9[label="d"];
+
+	9 -> 8[label="e"];
+
+
+}

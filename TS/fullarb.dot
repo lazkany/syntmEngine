@@ -1,0 +1,106 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+MainTS : CH=[r1,r2], OUT=[g1,g2] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+A1: CH=[r1], OUT=[g1];
+
+A2: CH=[r2], OUT=[g2]"];
+	13[label="{r2,r1}
+
+r2/g1
+
+13"];
+
+	6[label="{r2,r1}
+
+r1/-
+
+6"];
+
+	12[label="{r2,r1}
+
+r1/g1
+
+12"];
+
+	11[label="{r2,r1}
+
+r2/g2
+
+11"];
+
+	14[label="{r2,r1}
+
+r2/-
+
+14"];
+
+	10[label="{r2,r1}
+
+r1/g2
+
+10"];
+
+	2[label="{r2,r1}
+
+r2/-
+
+2"];
+
+	0[label="{r2,r1}
+
+/-
+
+0"];
+
+	3[label="{r2,r1}
+
+r1/g1
+
+3"];
+
+	 init -> 0[penwidth=0,tooltip="initial state"];
+
+	10 -> 14[label="r2"];
+
+	3 -> 3[label="r1"];
+
+	6 -> 3[label="r1"];
+
+	13 -> 11[label="r2"];
+
+	11 -> 11[label="r2"];
+
+	13 -> 10[label="r1"];
+
+	3 -> 2[label="r2"];
+
+	0 -> 2[label="r2"];
+
+	0 -> 6[label="r1"];
+
+	12 -> 11[label="r2"];
+
+	14 -> 13[label="r2"];
+
+	10 -> 3[label="r1"];
+
+	14 -> 12[label="r1"];
+
+	6 -> 13[label="r2"];
+
+	12 -> 10[label="r1"];
+
+	11 -> 6[label="r1"];
+
+	2 -> 11[label="r2"];
+
+	2 -> 10[label="r1"];
+
+
+}

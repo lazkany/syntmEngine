@@ -1,0 +1,104 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+MainTS : CH=[Fg, IgIb, Ib, Fb, Ig], OUT=[Pb, Pg, Kb, Kg] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+InTrayB: CH=[Ib,Fb], OUT=[Kb];
+
+InTrayG: CH=[Fg,IgIb,Ig], OUT=[Kg];
+
+Proc: CH=[], OUT=[Pb,Pg]"];
+	7[label="{Fg,Fb}
+
+Ib,Ig/-
+
+7"];
+
+	1[label="{Fg,Fb}
+
+Ib,Ig/-
+
+1"];
+
+	5[label="{IgIb}
+
+Fg/Pg
+
+5"];
+
+	3[label="{Fg}
+
+Fb/Pb
+
+3"];
+
+	0[label="{IgIb}
+
+/-
+
+0"];
+
+	15[label="{IgIb}
+
+Fg/Pg
+
+15"];
+
+	14[label="{Fb}
+
+Fg/Pg
+
+14"];
+
+	8[label="{Fg}
+
+Fb/Pb,Kg
+
+8"];
+
+	4[label="{IgIb}
+
+Fb/Pb,Kg
+
+4"];
+
+	6[label="{Fg,Fb}
+
+Ib,Ig/Kb
+
+6"];
+
+	 init -> 0[penwidth=0,tooltip="initial state"];
+
+	1 -> 3[label="Fb"];
+
+	15 -> 6[label="IgIb"];
+
+	5 -> 7[label="IgIb"];
+
+	1 -> 14[label="Fg"];
+
+	4 -> 6[label="IgIb"];
+
+	8 -> 15[label="Fg"];
+
+	14 -> 4[label="Fb"];
+
+	6 -> 8[label="Fb"];
+
+	3 -> 5[label="Fg"];
+
+	7 -> 8[label="Fb"];
+
+	0 -> 1[label="IgIb"];
+
+	6 -> 14[label="Fg"];
+
+	7 -> 14[label="Fg"];
+
+
+}

@@ -1,0 +1,206 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+Alternate : CH=[r2, q1, q2, c, f, s, rl1, rl2, r1], OUT=[-] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+Client1: CH=[r1,q1,rl1], OUT=[-];
+
+Client2: CH=[r2,q2,rl2], OUT=[-];
+
+Machine: CH=[c,s], OUT=[-];
+
+Server: CH=[f], OUT=[-]"];
+	1[label="{c}
+
+q2,f/-
+
+1"];
+
+	2[label="{f}
+
+q2,s,rl1/-
+
+2"];
+
+	3[label="{s}
+
+c,f/-
+
+3"];
+
+	4[label="{rl2}
+
+f,s/-
+
+4"];
+
+	5[label="{f}
+
+q2/-
+
+5"];
+
+	6[label="{q1}
+
+r1/-
+
+6"];
+
+	7[label="{c}
+
+q1,f,rl2/-
+
+7"];
+
+	8[label="{c}
+
+q2,f,rl1/-
+
+8"];
+
+	9[label="{s}
+
+c,f,rl1/-
+
+9"];
+
+	10[label="{q1}
+
+f,s,rl2,r1/-
+
+10"];
+
+	11[label="{s}
+
+c,f,rl2/-
+
+11"];
+
+	12[label="{rl1}
+
+f,s/-
+
+12"];
+
+	13[label="{rl2}
+
+f,s,rl1/-
+
+13"];
+
+	14[label="{s}
+
+c,f/-
+
+14"];
+
+	15[label="{r1}
+
+f,s,rl2/-
+
+15"];
+
+	16[label="{q2}
+
+r2/-
+
+16"];
+
+	17[label="{c}
+
+q1,f/-
+
+17"];
+
+	18[label="{q2}
+
+r2,f,s,rl1/-
+
+18"];
+
+	19[label="{f}
+
+q1,s,rl2/-
+
+19"];
+
+	20[label="{r2}
+
+f,s,rl1/-
+
+20"];
+
+	21[label="{rl1}
+
+f,s,rl2/-
+
+21"];
+
+	22[label="{f}
+
+q1/-
+
+22"];
+
+	0[label="{r2,r1}
+
+/-
+
+0"];
+
+	 init -> 0[penwidth=0,tooltip="initial state"];
+
+	4 -> 15[label="rl2"];
+
+	17 -> 3[label="c"];
+
+	19 -> 7[label="f"];
+
+	7 -> 11[label="c"];
+
+	11 -> 21[label="s"];
+
+	15 -> 10[label="r1"];
+
+	21 -> 20[label="rl1"];
+
+	0 -> 6[label="r1"];
+
+	22 -> 17[label="f"];
+
+	0 -> 16[label="r2"];
+
+	9 -> 13[label="s"];
+
+	20 -> 18[label="r2"];
+
+	6 -> 22[label="q1"];
+
+	13 -> 15[label="rl2"];
+
+	16 -> 5[label="q2"];
+
+	3 -> 12[label="s"];
+
+	1 -> 14[label="c"];
+
+	18 -> 2[label="q2"];
+
+	12 -> 20[label="rl1"];
+
+	14 -> 4[label="s"];
+
+	8 -> 9[label="c"];
+
+	2 -> 8[label="f"];
+
+	5 -> 1[label="f"];
+
+	10 -> 19[label="q1"];
+
+
+}

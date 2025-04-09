@@ -1,0 +1,71 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+Interface : CH=[a, b, c], OUT=[-] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+T1: CH=[f,e,g], OUT=[-];
+
+T2: CH=[a,b,c], OUT=[-]"];
+	1[label="{a}
+
+a/-
+
+1"];
+
+	0[label="{a}
+
+/-
+
+0"];
+
+	3[label="{a,b,c}
+
+a/-
+
+3"];
+
+	5[label="{}
+
+b/-
+
+5"];
+
+	6[label="{}
+
+c/-
+
+6"];
+
+	4[label="{}
+
+a/-
+
+4"];
+
+	2[label="{a}
+
+a/-
+
+2"];
+
+	 init -> 0[penwidth=0,tooltip="initial state"];
+
+	1 -> 2[label="a"];
+
+	0 -> 1[label="a"];
+
+	3 -> 6[label="c"];
+
+	3 -> 5[label="b"];
+
+	3 -> 4[label="a"];
+
+	2 -> 3[label="a"];
+
+
+}
