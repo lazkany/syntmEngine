@@ -57,10 +57,10 @@ LTL distributed synthesis
        - Choose option [1] to generate the distributed implementation.
        - The reset of the options are as before.
     
-# Note: we accept general LTL formulas and without any restrictions. We automatically 
-# adjust the formulas to respect our specialised mealy.
+Note: we accept general LTL formulas and without any restrictions. We automatically 
+adjust the formulas to respect our specialised mealy.
 
-# We would like to stress that this is the first tool of its kind to solve such a problem and 
+We would like to stress that this is the first tool of its kind to solve such a problem and 
 provide affordable (complexity wise) distributed implementation. Thus, all of our benchmarks
 are locally developed. Many of the LTL specifications were taken from Strix repository and
 distributed in our engine. We started an effort to collect benchmarks used for single-agent
