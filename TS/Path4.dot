@@ -1,0 +1,122 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+Path4 : CH=[01, 12, 23, 02, 13, 03], OUT=[] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+P0: CH=[01,02], OUT=[-];
+
+P1: CH=[12,13], OUT=[-];
+
+P2: CH=[23], OUT=[-];
+
+P3: CH=[03], OUT=[-]"];
+	01[label="{12,02,13,03}
+
+01/
+
+01"];
+
+	13[label="{01,12,23,03}
+
+13/
+
+13"];
+
+	02[label="{01,12,23,03}
+
+02/
+
+02"];
+
+	03[label="{01,23,02,13}
+
+03/
+
+03"];
+
+	00[label="{01,12,23,02,13,03}
+
+/
+
+00"];
+
+	12[label="{01,23,02,13}
+
+12/
+
+12"];
+
+	23[label="{12,02,13,03}
+
+23/
+
+23"];
+
+	 init -> 00[penwidth=0,tooltip="initial state"];
+
+	23 -> 03[label="03"];
+
+	01 -> 12[label="12"];
+
+	03 -> 13[label="13"];
+
+	03 -> 01[label="01"];
+
+	03 -> 02[label="02"];
+
+	00 -> 01[label="01"];
+
+	00 -> 02[label="02"];
+
+	12 -> 13[label="13"];
+
+	12 -> 01[label="01"];
+
+	12 -> 02[label="02"];
+
+	01 -> 03[label="03"];
+
+	23 -> 13[label="13"];
+
+	13 -> 12[label="12"];
+
+	01 -> 02[label="02"];
+
+	03 -> 23[label="23"];
+
+	12 -> 23[label="23"];
+
+	23 -> 02[label="02"];
+
+	13 -> 23[label="23"];
+
+	02 -> 01[label="01"];
+
+	02 -> 23[label="23"];
+
+	00 -> 13[label="13"];
+
+	00 -> 12[label="12"];
+
+	02 -> 12[label="12"];
+
+	13 -> 03[label="03"];
+
+	00 -> 03[label="03"];
+
+	23 -> 12[label="12"];
+
+	02 -> 03[label="03"];
+
+	13 -> 01[label="01"];
+
+	00 -> 23[label="23"];
+
+	01 -> 13[label="13"];
+
+
+}

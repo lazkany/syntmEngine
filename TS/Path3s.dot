@@ -1,0 +1,63 @@
+digraph G {
+graph [fontcolor="green",fontsize=14,rankdir=LR,ranksep=0.6,nodesep=0.5,label="
+Path3 : CH=[01, 12, 02], OUT=[] "];
+
+node[shape=circle, style=filled, fixedsize=true, fontsize=10];
+
+init [shape=point,style=invis];
+spec [fontcolor="green",fontsize=14,peripheries=0,shape=square,fixedsize=false,style="",label="Distribute to:
+
+P0: CH=[01], OUT=[-];
+
+P1: CH=[12], OUT=[-];
+
+P2: CH=[02], OUT=[-]"];
+	02[label="{01,12}
+
+02/
+
+02"];
+
+	00[label="{01,12,02}
+
+/
+
+00"];
+
+	01[label="{12,02}
+
+01/
+
+01"];
+
+	12[label="{01,02}
+
+12/
+
+12"];
+
+	 init -> 00[penwidth=0,tooltip="initial state"];
+
+	12 -> 02[label="02"];
+	12 -> 12[label="12"];
+
+	02 -> 01[label="01"];
+	02 -> 02[label="02"];
+
+	00 -> 01[label="01"];
+	00 -> 12[label="12"];
+	00 -> 00[label="00"]
+
+	01 -> 12[label="12"];
+	01 -> 01[label="01"];
+
+	02 -> 12[label="12"];
+
+	12 -> 01[label="01"];
+
+	00 -> 02[label="02"];
+
+	01 -> 02[label="02"];
+
+
+}
