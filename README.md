@@ -1,6 +1,6 @@
 # Tool that supports both TS decomposition and LTL Distributed Synthesis
 
-# This tool has been only tested on MacOS
+This tool has been only tested on MacOS and Ubuntu 24.0.4.
 
 Resources Folders:
 
